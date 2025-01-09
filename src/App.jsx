@@ -1,13 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
-import HelloWorld from './assets/HelloWorld'
+import ListEmployeeComponent from './Component/ListEmployeeComponent'
+import HeaderComponent from './Component/HeaderComponent'
+import FooterComponenet from './Component/FooterComponenet'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
    return (
     <>
-      <HelloWorld/> 
+      <BrowserRouter>
+      <HeaderComponent/>
+      <Routes>
+        // http://localhost:3000
+        <Route path ='/' element ={<ListEmployeeComponent/>}></Route>
+       <FooterComponenet/>
+      </Routes>
+      <ListEmployeeComponent/>
+      
+      </BrowserRouter> 
     </>
   )
 }
